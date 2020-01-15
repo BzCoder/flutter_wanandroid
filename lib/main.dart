@@ -13,6 +13,8 @@ import 'package:flutter_wanandroid/util/log_utils.dart';
 import 'package:oktoast/oktoast.dart';
 import 'package:provider/provider.dart';
 
+import 'i18n/localization.dart';
+
 void main() {
   runApp(MyApp());
   if (Platform.isAndroid) {
@@ -57,6 +59,7 @@ class MyApp extends StatelessWidget {
                     GlobalMaterialLocalizations.delegate,
                     GlobalWidgetsLocalizations.delegate,
                     GlobalCupertinoLocalizations.delegate,
+                    AppLocalizationsDelegate()
                   ],
                   supportedLocales: const [
                     Locale('zh', 'CH'),

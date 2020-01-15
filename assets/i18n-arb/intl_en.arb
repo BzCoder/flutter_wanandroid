@@ -1,0 +1,44 @@
+{
+  "@@last_modified": "2020-01-15T15:27:21.854005",
+  "@@locale":"en",
+  "appName": "WanAndroid",
+  "@appName": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "viewStateMessageError": "WanAndroid",
+  "@viewStateMessageError": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "viewStateMessageNetworkError": "WanAndroid",
+  "@viewStateMessageNetworkError": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "viewStateMessageEmpty": "WanAndroid",
+  "@viewStateMessageEmpty": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "viewStateButtonRefresh": "WanAndroid",
+  "@viewStateButtonRefresh": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "viewStateButtonRetry": "WanAndroid",
+  "@viewStateButtonRetry": {
+    "type": "text",
+    "placeholders": {}
+  },
+ "viewStateMessageUnAuth": "WanAndroid",
+  "@viewStateMessageUnAuth": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "viewStateButtonLogin": "WanAndroid",
+  "@viewStateButtonLogin": {
+    "type": "text",
+    "placeholders": {}
+  }
+}

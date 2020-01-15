@@ -1,0 +1,44 @@
+{
+  "@@last_modified": "2020-01-15T15:27:21.854005",
+  "@@locale":"zh_CH",
+  "appName": "玩安卓",
+  "@appName": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "viewStateMessageError": "加载失败",
+  "@viewStateMessageError": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "viewStateMessageNetworkError": "网络连接异常,请检查网络或稍后重试",
+  "@viewStateMessageNetworkError": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "viewStateMessageEmpty": "空空如也",
+  "@viewStateMessageEmpty": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "viewStateButtonRefresh": "刷新一下",
+  "@viewStateButtonRefresh": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "viewStateButtonRetry": "重试",
+  "@viewStateButtonRetry": {
+    "type": "text",
+    "placeholders": {}
+  },
+ "viewStateMessageUnAuth": "未登录",
+  "@viewStateMessageUnAuth": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "viewStateButtonLogin": "登录",
+  "@viewStateButtonLogin": {
+    "type": "text",
+    "placeholders": {}
+  }
+}

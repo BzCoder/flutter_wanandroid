@@ -1,13 +1,9 @@
 
-import 'dart:convert';
-
 import 'package:dio/dio.dart';
-import 'package:flutter/foundation.dart';
 import 'package:flutter_wanandroid/common/common.dart';
-import 'package:flutter_wanandroid/util/log_utils.dart';
-import 'package:rxdart/rxdart.dart';
-import 'error_handle.dart';
-import 'intercept.dart';
+
+import 'interceptors/common_interceptor.dart';
+import 'interceptors/logging_interceptor.dart';
 
 class DioUtils {
 
@@ -49,20 +45,14 @@ class DioUtils {
 //      client.badCertificateCallback =
 //          (X509Certificate cert, String host, int port) => true;
 //    };
-    /// 统一添加身份验证请求头
-    _dio.interceptors.add(AuthInterceptor());
-
-    /// 刷新Token
-    _dio.interceptors.add(TokenInterceptor());
-
     /// 打印Log(生产模式去除)
     if (!Constant.inProduction) {
-//      _dio.interceptors.add(LoggingInterceptor());
+      _dio.interceptors.add(LoggingInterceptor());
     }
 
-    /// 适配数据(根据自己的数据结构，可自行选择添加)
-//    _dio.interceptors.add(AdapterInterceptor());
+    _dio.interceptors.add(CommonInterceptor());
   }
-
-  Future getRequest(String url,)
 }
+
+
+

@@ -42,8 +42,10 @@ class _ProviderWidgetState<T extends ChangeNotifier>
 
   @override
   Widget build(BuildContext context) {
-    return ChangeNotifierProvider<T>.value(
-      value: model,
+    return MultiProvider(
+      providers: [
+        ChangeNotifierProvider<T>(create: (_) => model),
+      ],
       child: Consumer<T>(
         builder: widget.builder,
         child: widget.child,
@@ -96,7 +98,7 @@ class _ProviderWidgetState2<A extends ChangeNotifier, B extends ChangeNotifier>
     }
     super.dispose();
   }
-  
+
   @override
   Widget build(BuildContext context) {
     return MultiProvider(
