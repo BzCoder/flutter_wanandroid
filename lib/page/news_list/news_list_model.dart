@@ -4,7 +4,8 @@ import 'package:flutter_wanandroid/service/wan_android_repository.dart';
 class NewsListModel extends ViewStateRefreshListModel {
   final int cid;
 
-  NewsListModel(this.cid);
+  NewsListModel(this.cid, {int pageSize, int pageNumFirst})
+      : super(pageNumFirst: pageNumFirst, pageSize: pageSize);
 
   @override
   Future<List> loadData({int pageNum}) async {

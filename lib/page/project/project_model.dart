@@ -19,9 +19,9 @@ class ProjectCategoryModel extends ViewStateListModel<ProjectTreeEntity> {
 
 
 
-class ProjectListModel extends ViewStateRefreshListModel<NewsBean> {
+class ProjectListModel extends ViewStateRefreshListModel<NewsItemEntity> {
   @override
-  Future<List<NewsBean>> loadData({int pageNum})async {
+  Future<List<NewsItemEntity>> loadData({int pageNum})async {
     return await WanAndroidRepository.fetchProjectList(pageNum, cid: 294);
   }
 }

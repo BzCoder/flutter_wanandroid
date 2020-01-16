@@ -79,7 +79,9 @@ class _ProjectPageState extends State<ProjectPage>
                         labelStyle: TextStyles.textBold18,
                         labelColor: Theme.of(context).primaryColor,
                         indicatorSize: TabBarIndicatorSize.label,
+                        indicatorPadding: const EdgeInsets.only(left: 16.0, right: 16.0),
                         unselectedLabelColor: ThemeUtils.isDark(context) ? Colours.text_gray : Colours.text,
+                        unselectedLabelStyle:TextStyles.textDarkGray14,
                         isScrollable: true,
                         tabs: List.generate(
                             treeList.length,

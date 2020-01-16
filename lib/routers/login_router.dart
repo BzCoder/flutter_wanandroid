@@ -6,7 +6,6 @@ import 'package:flutter_wanandroid/routers/router_init.dart';
 
 
 class LoginRouter implements IRouterProvider{
-
   static String loginPage = '/login';
   static String registerPage = '/login/register';
   static String smsLoginPage = '/login/smsLogin';

@@ -7,10 +7,10 @@ import 'view_state_list_model.dart';
 /// 基于
 abstract class ViewStateRefreshListModel<T> extends ViewStateListModel<T> {
   /// 分页第一页页码
-  static const int pageNumFirst = 0;
+  int pageNumFirst;
 
   /// 分页条目数量
-  static const int pageSize = 20;
+  int pageSize;
 
   RefreshController _refreshController =
       RefreshController(initialRefresh: false);
@@ -18,7 +18,10 @@ abstract class ViewStateRefreshListModel<T> extends ViewStateListModel<T> {
   RefreshController get refreshController => _refreshController;
 
   /// 当前页码
-  int _currentPageNum = pageNumFirst;
+  int _currentPageNum;
+
+  ViewStateRefreshListModel({this.pageNumFirst = 1, this.pageSize = 20})
+      : _currentPageNum = pageNumFirst;
 
   /// 下拉刷新
   ///

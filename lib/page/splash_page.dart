@@ -14,7 +14,7 @@ import 'package:rxdart/rxdart.dart';
 import 'package:flutter_swiper/flutter_swiper.dart';
 import 'package:flustars/flustars.dart';
 
-import 'login_router.dart';
+import '../routers/login_router.dart';
 
 class SplashPage extends StatefulWidget {
   @override

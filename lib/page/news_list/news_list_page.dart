@@ -1,7 +1,9 @@
 import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
 import 'package:flutter_wanandroid/page/news_list/news_list_entity.dart';
 import 'package:flutter_wanandroid/provider/provider_widget.dart';
 import 'package:flutter_wanandroid/provider/view_state_widget.dart';
+import 'package:flutter_wanandroid/routers/fluro_navigator.dart';
 import 'package:pull_to_refresh/pull_to_refresh.dart';
 
 import 'news_item.dart';
@@ -30,11 +32,11 @@ class _NewsListPageState extends State<NewsListPage>
   Widget build(BuildContext context) {
     super.build(context);
     return ProviderWidget<NewsListModel>(
-      model: NewsListModel(widget.cid),
+      model: NewsListModel(widget.cid, pageNumFirst: 1, pageSize: 15),
       onModelReady: (model) => model.initData(),
       builder: (context, model, child) {
         if (model.busy) {
-          return Text("加载中");
+          return Center(child: Text("加载中"));
         } else if (model.error && model.list.isEmpty) {
           return ViewStateErrorWidget(
               error: model.viewStateError, onPressed: model.initData);
@@ -51,15 +53,15 @@ class _NewsListPageState extends State<NewsListPage>
             child: ListView.builder(
                 itemCount: model.list.length,
                 itemBuilder: (context, index) {
-                  NewsBean item = model.list[index];
-                  return NewsListWidget(item);
+                  NewsItemEntity item = model.list[index];
+                  return InkWell(
+                      onTap: ()=> NavigatorUtils.goWebViewPage(context,item.title, item.link),
+                      child: NewsListWidget(item));
                 }));
       },
     );
   }
 }
-
-
 
 /// 通用的footer
 ///
@@ -72,6 +74,6 @@ class RefresherFooter extends StatelessWidget {
 //      idleText: S.of(context).loadMoreIdle,
 //      loadingText: S.of(context).loadMoreLoading,
 //      noDataText: S.of(context).loadMoreNoData,
-    );
+        );
   }
 }

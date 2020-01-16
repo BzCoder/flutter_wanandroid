@@ -4,12 +4,12 @@ import 'package:flutter_wanandroid/page/project/project_page.dart';
 import 'package:flutter_wanandroid/res/colors.dart';
 import 'package:flutter_wanandroid/res/dimens.dart';
 
-class HomePage extends StatefulWidget {
+class MainPage extends StatefulWidget {
   @override
-  _HomePageState createState() => _HomePageState();
+  _MainPageState createState() => _MainPageState();
 }
 
-class _HomePageState extends State<HomePage> {
+class _MainPageState extends State<MainPage> {
   List<String> _bottomNavigationTitle;
 
   List<BottomNavigationBarItem> _listIcon;
@@ -27,7 +27,7 @@ class _HomePageState extends State<HomePage> {
   initPages() {
     _currentIndex = 0;
     _pageController = new PageController();
-    _bottomNavigationTitle = ["资讯", "公众号", "我的", "你的"];
+    _bottomNavigationTitle = ["开源项目", "公众号", "我的", "你的"];
     _pageList = [ProjectPage(), LoginPage(), ProjectPage(), LoginPage()];
   }
 

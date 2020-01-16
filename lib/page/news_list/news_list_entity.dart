@@ -7,13 +7,13 @@ part 'news_list_entity.g.dart';
 /// author : BaoZhou
 /// date : 2020-01-15 20:20
 @JsonSerializable()
-class ProjectListEntity extends Object {
+class NewsListEntity extends Object {
 
   @JsonKey(name: 'curPage')
   int curPage;
 
   @JsonKey(name: 'datas')
-  List<NewsBean> newsList;
+  List<NewsItemEntity> newsList;
 
   @JsonKey(name: 'offset')
   int offset;
@@ -30,17 +30,17 @@ class ProjectListEntity extends Object {
   @JsonKey(name: 'total')
   int total;
 
-  ProjectListEntity(this.curPage,this.newsList,this.offset,this.over,this.pageCount,this.size,this.total,);
+  NewsListEntity(this.curPage,this.newsList,this.offset,this.over,this.pageCount,this.size,this.total,);
 
-  factory ProjectListEntity.fromJson(Map<String, dynamic> srcJson) => _$ProjectListEntityFromJson(srcJson);
+  factory NewsListEntity.fromJson(Map<String, dynamic> srcJson) => _$NewsListEntityFromJson(srcJson);
 
-  Map<String, dynamic> toJson() => _$ProjectListEntityToJson(this);
+  Map<String, dynamic> toJson() => _$NewsListEntityToJson(this);
 
 }
 
 
 @JsonSerializable()
-class NewsBean extends Object {
+class NewsItemEntity extends Object {
 
   @JsonKey(name: 'apkLink')
   String apkLink;
@@ -129,11 +129,11 @@ class NewsBean extends Object {
   @JsonKey(name: 'zan')
   int zan;
 
-  NewsBean(this.apkLink,this.audit,this.author,this.chapterId,this.chapterName,this.collect,this.courseId,this.desc,this.envelopePic,this.fresh,this.id,this.link,this.niceDate,this.niceShareDate,this.origin,this.prefix,this.projectLink,this.publishTime,this.selfVisible,this.shareDate,this.shareUser,this.superChapterId,this.superChapterName,this.tags,this.title,this.type,this.userId,this.visible,this.zan,);
+  NewsItemEntity(this.apkLink,this.audit,this.author,this.chapterId,this.chapterName,this.collect,this.courseId,this.desc,this.envelopePic,this.fresh,this.id,this.link,this.niceDate,this.niceShareDate,this.origin,this.prefix,this.projectLink,this.publishTime,this.selfVisible,this.shareDate,this.shareUser,this.superChapterId,this.superChapterName,this.tags,this.title,this.type,this.userId,this.visible,this.zan,);
 
-  factory NewsBean.fromJson(Map<String, dynamic> srcJson) => _$NewsBeanFromJson(srcJson);
+  factory NewsItemEntity.fromJson(Map<String, dynamic> srcJson) => _$NewsItemEntityFromJson(srcJson);
 
-  Map<String, dynamic> toJson() => _$NewsBeanToJson(this);
+  Map<String, dynamic> toJson() => _$NewsItemEntityToJson(this);
 
 }
 
