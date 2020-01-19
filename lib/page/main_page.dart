@@ -4,6 +4,8 @@ import 'package:flutter_wanandroid/page/project/project_page.dart';
 import 'package:flutter_wanandroid/res/colors.dart';
 import 'package:flutter_wanandroid/res/dimens.dart';
 
+import 'head_line/head_line_page.dart';
+
 class MainPage extends StatefulWidget {
   @override
   _MainPageState createState() => _MainPageState();
@@ -27,8 +29,8 @@ class _MainPageState extends State<MainPage> {
   initPages() {
     _currentIndex = 0;
     _pageController = new PageController();
-    _bottomNavigationTitle = ["开源项目", "公众号", "我的", "你的"];
-    _pageList = [ProjectPage(), LoginPage(), ProjectPage(), LoginPage()];
+    _bottomNavigationTitle = ["首页", "项目", "我的", "你的"];
+    _pageList = [HeadLinePage(), ProjectPage(), LoginPage(), LoginPage()];
   }
 
   @override

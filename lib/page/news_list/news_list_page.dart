@@ -6,7 +6,7 @@ import 'package:flutter_wanandroid/provider/view_state_widget.dart';
 import 'package:flutter_wanandroid/routers/fluro_navigator.dart';
 import 'package:pull_to_refresh/pull_to_refresh.dart';
 
-import 'news_item.dart';
+import 'news_item_left_image_widget.dart';
 import 'news_list_model.dart';
 
 /// 文章列表
@@ -56,7 +56,7 @@ class _NewsListPageState extends State<NewsListPage>
                   NewsItemEntity item = model.list[index];
                   return InkWell(
                       onTap: ()=> NavigatorUtils.goWebViewPage(context,item.title, item.link),
-                      child: NewsListWidget(item));
+                      child: NewsListRightImageWidget(item));
                 }));
       },
     );

@@ -6,20 +6,20 @@ import 'news_list_entity.dart';
 import 'package:flutter_wanandroid/res/styles.dart';
 import 'package:html_unescape/html_unescape.dart';
 
-/// 文章列表Item
+/// 文章列表Item 右图格式
 ///
 /// author : BaoZhou
 /// date : 2020-1-16 1:09
-class NewsListWidget extends StatefulWidget {
+class NewsListRightImageWidget extends StatefulWidget {
   final NewsItemEntity itemBean;
 
-  NewsListWidget(this.itemBean);
+  NewsListRightImageWidget(this.itemBean);
 
   @override
-  _NewsListWidgetState createState() => _NewsListWidgetState();
+  _NewsListRightImageWidgetState createState() => _NewsListRightImageWidgetState();
 }
 
-class _NewsListWidgetState extends State<NewsListWidget> {
+class _NewsListRightImageWidgetState extends State<NewsListRightImageWidget> {
   @override
   Widget build(BuildContext context) {
     return Container(

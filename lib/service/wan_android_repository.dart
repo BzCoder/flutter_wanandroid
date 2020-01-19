@@ -3,7 +3,15 @@ import 'package:flutter_wanandroid/page/head_line/banner_item_entity.dart';
 import 'package:flutter_wanandroid/page/news_list/news_list_entity.dart';
 import 'package:flutter_wanandroid/page/project/project_tree_entity.dart';
 
+
+
+/// 网络请求
+///
+/// author : BaoZhou
+/// date : 2020-01-17 10:22
 class WanAndroidRepository {
+
+
   // 首页Banner
   static Future fetchBanners() async {
     var response = await DioUtils.instance.getDio().get('banner/json');
@@ -13,15 +21,15 @@ class WanAndroidRepository {
   }
 
   // 置顶文章
-  static Future fetchTopArticles() async {
+  static Future fetchTopNews() async {
     var response = await DioUtils.instance.getDio().get('article/top/json');
-    return response.data['datas']
+    return (response.data as List)
         .map<NewsItemEntity>((item) => NewsItemEntity.fromJson(item))
         .toList();
   }
 
   // 首页文章
-  static Future fetchArticles(int pageNum, {int cid}) async {
+  static Future fetchNews(int pageNum, {int cid}) async {
     await Future.delayed(Duration(seconds: 1)); //增加动效
     var response = await DioUtils.instance.getDio().get(
         'article/list/$pageNum/json',
@@ -30,6 +38,9 @@ class WanAndroidRepository {
         .map<NewsItemEntity>((item) => NewsItemEntity.fromJson(item))
         .toList();
   }
+
+
+
 
   // 项目目录
   static Future fetchProjectTreeCategories() async {

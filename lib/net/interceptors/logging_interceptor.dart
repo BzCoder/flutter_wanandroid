@@ -27,15 +27,15 @@ class LoggingInterceptor extends InterceptorsWrapper{
   @override
   onResponse(Response response) {
     endTime = DateTime.now();
-    int duration = endTime.difference(startTime).inMilliseconds;
-    if (response.statusCode == ExceptionHandle.success) {
-      Log.d('ResponseCode: ${response.statusCode}');
-    } else {
-      Log.e('ResponseCode: ${response.statusCode}');
-    }
-    // 输出结果
-    Log.json(response.data.toString());
-    Log.d('----------End: $duration 毫秒----------');
+//    int duration = endTime.difference(startTime).inMilliseconds;
+//    if (response.statusCode == ExceptionHandle.success) {
+//      Log.d('ResponseCode: ${response.statusCode}');
+//    } else {
+//      Log.e('ResponseCode: ${response.statusCode}');
+//    }
+//    // 输出结果
+//    Log.json(response.data.toString());
+//    Log.d('----------End: $duration 毫秒----------');
     return super.onResponse(response);
   }
 
