@@ -2,7 +2,6 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_wanandroid/page/head_line/banner_item_entity.dart';
 import 'package:flutter_wanandroid/page/head_line/head_line_model.dart';
-import 'package:flutter_wanandroid/page/news_list/news_item_left_image_widget.dart';
 import 'package:flutter_wanandroid/page/news_list/news_item_none_image_widget.dart';
 import 'package:flutter_wanandroid/page/news_list/news_list_entity.dart';
 import 'package:flutter_wanandroid/page/news_list/news_list_page.dart';

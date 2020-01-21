@@ -1,5 +1,5 @@
 import 'package:flutter_wanandroid/provider/view_state_refresh_list_model.dart';
-import 'package:flutter_wanandroid/service/wan_android_repository.dart';
+import 'package:flutter_wanandroid/service/wan_android_remote.dart';
 
 class NewsListModel extends ViewStateRefreshListModel {
   final int cid;
@@ -9,7 +9,7 @@ class NewsListModel extends ViewStateRefreshListModel {
 
   @override
   Future<List> loadData({int pageNum}) async {
-    return await WanAndroidRepository.fetchProjectList(pageNum, cid: cid);
+    return await WanAndroidRemoteService.fetchProjectList(pageNum, cid: cid);
   }
 
   @override
