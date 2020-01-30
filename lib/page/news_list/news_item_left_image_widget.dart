@@ -16,7 +16,8 @@ class NewsListRightImageWidget extends StatefulWidget {
   NewsListRightImageWidget(this.itemBean);
 
   @override
-  _NewsListRightImageWidgetState createState() => _NewsListRightImageWidgetState();
+  _NewsListRightImageWidgetState createState() =>
+      _NewsListRightImageWidgetState();
 }
 
 class _NewsListRightImageWidgetState extends State<NewsListRightImageWidget> {
@@ -24,8 +25,7 @@ class _NewsListRightImageWidgetState extends State<NewsListRightImageWidget> {
   Widget build(BuildContext context) {
     return Container(
         height: 120.0,
-        padding:
-            const EdgeInsets.symmetric(vertical: 15.0, horizontal: 10.0),
+        padding: const EdgeInsets.symmetric(vertical: 15.0, horizontal: 10.0),
         child: Row(
           children: <Widget>[
             Expanded(
@@ -43,9 +43,7 @@ class _NewsListRightImageWidgetState extends State<NewsListRightImageWidget> {
                   ),
                   Align(
                     child: Text(
-                      widget.itemBean.author +
-                          " · " +
-                          widget.itemBean.niceDate,
+                      widget.itemBean.author + " · " + widget.itemBean.niceDate,
                       style: TextStyles.textGray12,
                     ),
                     alignment: Alignment.bottomLeft,

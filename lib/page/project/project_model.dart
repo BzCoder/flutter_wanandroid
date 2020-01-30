@@ -1,5 +1,3 @@
-
-
 import 'package:flutter_wanandroid/page/news_list/news_list_entity.dart';
 import 'package:flutter_wanandroid/page/project/project_tree_entity.dart';
 import 'package:flutter_wanandroid/provider/view_state_list_model.dart';
@@ -17,12 +15,9 @@ class ProjectCategoryModel extends ViewStateListModel<ProjectTreeEntity> {
   }
 }
 
-
-
 class ProjectListModel extends ViewStateRefreshListModel<NewsItemEntity> {
   @override
-  Future<List<NewsItemEntity>> loadData({int pageNum})async {
+  Future<List<NewsItemEntity>> loadData({int pageNum}) async {
     return await WanAndroidRepository.fetchProjectList(pageNum, cid: 294);
   }
 }
-

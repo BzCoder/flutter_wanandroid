@@ -1,10 +1,8 @@
-
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_wanandroid/res/colors.dart';
 
 class ThemeUtils {
-
   static bool isDark(BuildContext context) {
     return Theme.of(context).brightness == Brightness.dark;
   }
@@ -16,7 +14,7 @@ class ThemeUtils {
   static Color getIconColor(BuildContext context) {
     return isDark(context) ? Colours.dark_text : null;
   }
-  
+
   static Color getBackgroundColor(BuildContext context) {
     return Theme.of(context).scaffoldBackgroundColor;
   }
@@ -24,7 +22,7 @@ class ThemeUtils {
   static Color getDialogBackgroundColor(BuildContext context) {
     return Theme.of(context).canvasColor;
   }
-  
+
   static Color getStickyHeaderColor(BuildContext context) {
     return isDark(context) ? Colours.dark_bg_gray_ : Colours.bg_gray_;
   }

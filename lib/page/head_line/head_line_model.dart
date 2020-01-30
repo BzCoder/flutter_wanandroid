@@ -3,8 +3,6 @@ import 'package:flutter_wanandroid/page/news_list/news_list_entity.dart';
 import 'package:flutter_wanandroid/provider/view_state_refresh_list_model.dart';
 import 'package:flutter_wanandroid/service/wan_android_repository.dart';
 
-
-
 class HeadLineModel extends ViewStateRefreshListModel {
   List<BannerItemEntity> _banners;
 

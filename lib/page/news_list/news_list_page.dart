@@ -55,7 +55,8 @@ class _NewsListPageState extends State<NewsListPage>
                 itemBuilder: (context, index) {
                   NewsItemEntity item = model.list[index];
                   return InkWell(
-                      onTap: ()=> NavigatorUtils.goWebViewPage(context,item.title, item.link),
+                      onTap: () => NavigatorUtils.goWebViewPage(
+                          context, item.title, item.link),
                       child: NewsListRightImageWidget(item));
                 }));
       },

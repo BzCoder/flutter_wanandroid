@@ -23,7 +23,7 @@ class _NewsListNoneImageWidgetState extends State<NewsListNoneImageWidget> {
   @override
   Widget build(BuildContext context) {
     return Container(
-        height: widget.isTopNews?110.0:100.0,
+        height: widget.isTopNews ? 110.0 : 100.0,
         padding: const EdgeInsets.symmetric(vertical: 10.0, horizontal: 10.0),
         child: Row(
           children: <Widget>[
@@ -42,7 +42,7 @@ class _NewsListNoneImageWidgetState extends State<NewsListNoneImageWidget> {
                   Align(
                     child: Text.rich(
                       TextSpan(
-                        text:  widget.isTopNews?"置顶  ":"",
+                        text: widget.isTopNews ? "置顶  " : "",
                         style: TextStyle(fontSize: 12, color: Colors.red),
                         children: <TextSpan>[
                           TextSpan(

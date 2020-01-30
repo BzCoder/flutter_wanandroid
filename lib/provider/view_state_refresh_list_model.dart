@@ -12,8 +12,6 @@ abstract class ViewStateRefreshListModel<T> extends ViewStateListModel<T> {
   /// 分页条目数量
   int pageSize;
 
-
-
   RefreshController _refreshController =
       RefreshController(initialRefresh: false);
 

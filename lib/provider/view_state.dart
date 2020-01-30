@@ -1,4 +1,3 @@
-
 /// 页面状态类型
 enum ViewState {
   idle,

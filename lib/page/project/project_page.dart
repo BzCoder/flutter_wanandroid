@@ -11,8 +11,6 @@ import 'package:flutter_wanandroid/util/theme_utils.dart';
 import 'package:html_unescape/html_unescape.dart';
 import 'package:provider/provider.dart';
 
-
-
 /// 项目主页
 ///
 /// author : BaoZhou
@@ -74,24 +72,28 @@ class _ProjectPageState extends State<ProjectPage>
                 }
                 return Scaffold(
                   appBar: AppBar(
-                    titleSpacing: 0,
-                    title: TabBar(
-                        labelStyle: TextStyles.textBold18,
-                        labelColor: Theme.of(context).primaryColor,
-                        indicatorSize: TabBarIndicatorSize.label,
-                        indicatorPadding: const EdgeInsets.only(left: 16.0, right: 16.0),
-                        unselectedLabelColor: ThemeUtils.isDark(context) ? Colours.text_gray : Colours.text,
-                        unselectedLabelStyle:TextStyles.textDarkGray14,
-                        isScrollable: true,
-                        tabs: List.generate(
-                            treeList.length,
-                                (index) => Tab(
-                              text: HtmlUnescape().convert(treeList[index].name),
-                            )))
-                  ),
+                      titleSpacing: 0,
+                      title: TabBar(
+                          labelStyle: TextStyles.textBold18,
+                          labelColor: Theme.of(context).primaryColor,
+                          indicatorSize: TabBarIndicatorSize.label,
+                          indicatorPadding:
+                              const EdgeInsets.only(left: 16.0, right: 16.0),
+                          unselectedLabelColor: ThemeUtils.isDark(context)
+                              ? Colours.text_gray
+                              : Colours.text,
+                          unselectedLabelStyle: TextStyles.textDarkGray14,
+                          isScrollable: true,
+                          tabs: List.generate(
+                              treeList.length,
+                              (index) => Tab(
+                                    text: HtmlUnescape()
+                                        .convert(treeList[index].name),
+                                  )))),
                   body: TabBarView(
-                    children: List.generate(treeList.length,
-                        (index) => NewsListPage(treeList[index].id),
+                    children: List.generate(
+                      treeList.length,
+                      (index) => NewsListPage(treeList[index].id),
                     ),
                   ),
                 );

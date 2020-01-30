@@ -105,12 +105,13 @@ class ViewStateErrorWidget extends StatelessWidget {
     switch (error.errorType) {
       case ErrorType.networkError:
         defaultImage = Transform.translate(
-          offset: Offset(-50,0),
+          offset: Offset(-50, 0),
           child: const Icon(IconFonts.pageNetworkError,
               size: 100, color: Colors.grey),
         );
-        defaultTitle = AppLocalizations.of(context).viewStateMessageNetworkError;
-        errorMessage = '';// 网络异常移除message提示
+        defaultTitle =
+            AppLocalizations.of(context).viewStateMessageNetworkError;
+        errorMessage = ''; // 网络异常移除message提示
         break;
       case ErrorType.defaultError:
         defaultImage =

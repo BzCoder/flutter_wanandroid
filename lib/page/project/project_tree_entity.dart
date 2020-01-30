@@ -8,7 +8,6 @@ part 'project_tree_entity.g.dart';
 /// date : 2020-01-15 20:21
 @JsonSerializable()
 class ProjectTreeEntity extends Object {
-
   @JsonKey(name: 'children')
   List<dynamic> children;
 
@@ -33,12 +32,19 @@ class ProjectTreeEntity extends Object {
   @JsonKey(name: 'visible')
   int visible;
 
-  ProjectTreeEntity(this.children,this.courseId,this.id,this.name,this.order,this.parentChapterId,this.userControlSetTop,this.visible,);
+  ProjectTreeEntity(
+    this.children,
+    this.courseId,
+    this.id,
+    this.name,
+    this.order,
+    this.parentChapterId,
+    this.userControlSetTop,
+    this.visible,
+  );
 
-  factory ProjectTreeEntity.fromJson(Map<String, dynamic> srcJson) => _$ProjectTreeEntityFromJson(srcJson);
+  factory ProjectTreeEntity.fromJson(Map<String, dynamic> srcJson) =>
+      _$ProjectTreeEntityFromJson(srcJson);
 
   Map<String, dynamic> toJson() => _$ProjectTreeEntityToJson(this);
-
 }
-
-

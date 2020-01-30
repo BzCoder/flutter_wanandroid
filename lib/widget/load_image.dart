@@ -46,7 +46,9 @@ class LoadImage extends StatelessWidget {
   }
 
   Widget _getHolder() {
-    return holderImg == "none" ? defaultPlaceHolder(width: width, height: height): LoadAssetImage(holderImg, height: height, width: width, fit: fit);
+    return holderImg == "none"
+        ? defaultPlaceHolder(width: width, height: height)
+        : LoadAssetImage(holderImg, height: height, width: width, fit: fit);
   }
 
   Widget defaultPlaceHolder({double width, double height}) {

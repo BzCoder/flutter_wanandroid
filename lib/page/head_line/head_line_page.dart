@@ -72,14 +72,23 @@ class _HeadLinePageState extends State<HeadLinePage>
                           },
                         ));
                   }
+
                   ///头条
-                  else if (model.topNews.length > 0 && index < model.topNews.length+(model.banners.length > 0 ? 1 : 0)) {
-                    NewsItemEntity item = model.topNews[index - (model.banners.length > 0 ? 1 : 0)];
+                  else if (model.topNews.length > 0 &&
+                      index <
+                          model.topNews.length +
+                              (model.banners.length > 0 ? 1 : 0)) {
+                    NewsItemEntity item = model
+                        .topNews[index - (model.banners.length > 0 ? 1 : 0)];
                     return InkWell(
                         onTap: () => NavigatorUtils.goWebViewPage(
                             context, item.title, item.link),
-                        child: NewsListNoneImageWidget(item,isTopNews: true,));
+                        child: NewsListNoneImageWidget(
+                          item,
+                          isTopNews: true,
+                        ));
                   }
+
                   ///普通新闻
                   else {
                     NewsItemEntity item = model.list[index -

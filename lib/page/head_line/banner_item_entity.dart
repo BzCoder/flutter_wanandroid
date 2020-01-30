@@ -1,11 +1,9 @@
-import 'package:json_annotation/json_annotation.dart'; 
-  
+import 'package:json_annotation/json_annotation.dart';
+
 part 'banner_item_entity.g.dart';
 
-
 @JsonSerializable()
-  class BannerItemEntity extends Object {
-
+class BannerItemEntity extends Object {
   @JsonKey(name: 'desc')
   String desc;
 
@@ -30,12 +28,19 @@ part 'banner_item_entity.g.dart';
   @JsonKey(name: 'url')
   String url;
 
-  BannerItemEntity(this.desc,this.id,this.imagePath,this.isVisible,this.order,this.title,this.type,this.url,);
+  BannerItemEntity(
+    this.desc,
+    this.id,
+    this.imagePath,
+    this.isVisible,
+    this.order,
+    this.title,
+    this.type,
+    this.url,
+  );
 
-  factory BannerItemEntity.fromJson(Map<String, dynamic> srcJson) => _$BannerItemEntityFromJson(srcJson);
+  factory BannerItemEntity.fromJson(Map<String, dynamic> srcJson) =>
+      _$BannerItemEntityFromJson(srcJson);
 
   Map<String, dynamic> toJson() => _$BannerItemEntityToJson(this);
-
 }
-
-  

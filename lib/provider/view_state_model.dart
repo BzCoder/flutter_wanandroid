@@ -76,6 +76,7 @@ class ViewStateModel with ChangeNotifier {
       e = e.error;
       if (e is UnAuthorizedException) {
         stackTrace = null;
+
         /// 已在onUnAuthorizedException中处理
         setUnAuthorized();
         return;
@@ -108,7 +109,6 @@ class ViewStateModel with ChangeNotifier {
       });
     }
   }
-
 
   @override
   String toString() {

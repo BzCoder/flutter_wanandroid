@@ -1,8 +1,6 @@
 
-import 'package:barcode_scan/barcode_scan.dart';
 import 'package:common_utils/common_utils.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:flutter_wanandroid/util/theme_utils.dart';
 import 'package:flutter_wanandroid/util/toast.dart';
 import 'package:keyboard_actions/keyboard_actions.dart';
@@ -20,19 +18,6 @@ class Utils {
     }
   }
 
-  /// 调起二维码扫描页
-  static Future<String> scan() async {
-    try {
-      return await BarcodeScanner.scan();
-    } catch (e) {
-      if (e is PlatformException) {
-        if (e.code == BarcodeScanner.CameraAccessDenied) {
-          Toast.show('没有相机权限！');
-        }
-      }
-    }
-    return null;
-  }
 
   static String formatPrice(String price, {format: MoneyFormat.END_INTEGER}){
     return MoneyUtil.changeYWithUnit(NumUtil.getDoubleByValueStr(price), MoneyUnit.YUAN, format: format);

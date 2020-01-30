@@ -33,7 +33,8 @@ class _LoginPageState extends State<LoginPage> {
                   ),
                   MyTextField(
                     focusNode: _nameFocusNode,
-                    config: Utils.getKeyboardActionsConfig(context, [_nameFocusNode, _passwordFocusNode]),
+                    config: Utils.getKeyboardActionsConfig(
+                        context, [_nameFocusNode, _passwordFocusNode]),
                     controller: _nameController,
                     maxLength: 11,
                     keyboardType: TextInputType.phone,

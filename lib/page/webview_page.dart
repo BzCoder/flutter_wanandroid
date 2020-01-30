@@ -1,4 +1,3 @@
-
 import 'dart:async';
 
 import 'package:flutter/material.dart';
@@ -6,7 +5,6 @@ import 'package:flutter_wanandroid/widget/app_bar.dart';
 import 'package:webview_flutter/webview_flutter.dart';
 
 class WebViewPage extends StatefulWidget {
-
   const WebViewPage({
     Key key,
     @required this.title,
@@ -15,14 +13,14 @@ class WebViewPage extends StatefulWidget {
 
   final String title;
   final String url;
-  
+
   @override
   _WebViewPageState createState() => _WebViewPageState();
 }
 
 class _WebViewPageState extends State<WebViewPage> {
-
-  final Completer<WebViewController> _controller = Completer<WebViewController>();
+  final Completer<WebViewController> _controller =
+      Completer<WebViewController>();
 
   @override
   Widget build(BuildContext context) {
@@ -52,11 +50,8 @@ class _WebViewPageState extends State<WebViewPage> {
                   onWebViewCreated: (WebViewController webViewController) {
                     _controller.complete(webViewController);
                   },
-                )
-            ),
+                )),
           );
-        }
-    );
+        });
   }
-
 }

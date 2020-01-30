@@ -8,7 +8,6 @@ part 'news_list_entity.g.dart';
 /// date : 2020-01-15 20:20
 @JsonSerializable()
 class NewsListEntity extends Object {
-
   @JsonKey(name: 'curPage')
   int curPage;
 
@@ -30,18 +29,24 @@ class NewsListEntity extends Object {
   @JsonKey(name: 'total')
   int total;
 
-  NewsListEntity(this.curPage,this.newsList,this.offset,this.over,this.pageCount,this.size,this.total,);
+  NewsListEntity(
+    this.curPage,
+    this.newsList,
+    this.offset,
+    this.over,
+    this.pageCount,
+    this.size,
+    this.total,
+  );
 
-  factory NewsListEntity.fromJson(Map<String, dynamic> srcJson) => _$NewsListEntityFromJson(srcJson);
+  factory NewsListEntity.fromJson(Map<String, dynamic> srcJson) =>
+      _$NewsListEntityFromJson(srcJson);
 
   Map<String, dynamic> toJson() => _$NewsListEntityToJson(this);
-
 }
-
 
 @JsonSerializable()
 class NewsItemEntity extends Object {
-
   @JsonKey(name: 'apkLink')
   String apkLink;
 
@@ -129,30 +134,59 @@ class NewsItemEntity extends Object {
   @JsonKey(name: 'zan')
   int zan;
 
-  NewsItemEntity(this.apkLink,this.audit,this.author,this.chapterId,this.chapterName,this.collect,this.courseId,this.desc,this.envelopePic,this.fresh,this.id,this.link,this.niceDate,this.niceShareDate,this.origin,this.prefix,this.projectLink,this.publishTime,this.selfVisible,this.shareDate,this.shareUser,this.superChapterId,this.superChapterName,this.tags,this.title,this.type,this.userId,this.visible,this.zan,);
+  NewsItemEntity(
+    this.apkLink,
+    this.audit,
+    this.author,
+    this.chapterId,
+    this.chapterName,
+    this.collect,
+    this.courseId,
+    this.desc,
+    this.envelopePic,
+    this.fresh,
+    this.id,
+    this.link,
+    this.niceDate,
+    this.niceShareDate,
+    this.origin,
+    this.prefix,
+    this.projectLink,
+    this.publishTime,
+    this.selfVisible,
+    this.shareDate,
+    this.shareUser,
+    this.superChapterId,
+    this.superChapterName,
+    this.tags,
+    this.title,
+    this.type,
+    this.userId,
+    this.visible,
+    this.zan,
+  );
 
-  factory NewsItemEntity.fromJson(Map<String, dynamic> srcJson) => _$NewsItemEntityFromJson(srcJson);
+  factory NewsItemEntity.fromJson(Map<String, dynamic> srcJson) =>
+      _$NewsItemEntityFromJson(srcJson);
 
   Map<String, dynamic> toJson() => _$NewsItemEntityToJson(this);
-
 }
-
 
 @JsonSerializable()
 class Tags extends Object {
-
   @JsonKey(name: 'name')
   String name;
 
   @JsonKey(name: 'url')
   String url;
 
-  Tags(this.name,this.url,);
+  Tags(
+    this.name,
+    this.url,
+  );
 
-  factory Tags.fromJson(Map<String, dynamic> srcJson) => _$TagsFromJson(srcJson);
+  factory Tags.fromJson(Map<String, dynamic> srcJson) =>
+      _$TagsFromJson(srcJson);
 
   Map<String, dynamic> toJson() => _$TagsToJson(this);
-
 }
-
-
